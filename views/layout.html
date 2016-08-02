@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+	<ul class='nav nav-tabs'>
+		<li><a href="/">Home</a></li>
+		{% for category in categories %}
+			<li><a href="/categories/{{category}}">{{category}}</a></li>
+		{%endfor%}
+	</ul>
+
+	<div class='container'>
+		{%block content%}
+		{%endblock%}
+	</div>	
+</body>
+</html>
