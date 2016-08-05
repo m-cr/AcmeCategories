@@ -18,7 +18,7 @@ app.set('views', __dirname + '/views');
 
 app.get('/', function(req, res, next){
 	res.render('index', {title: 'Acme Categories - Home', categories: categories.getCategories() });
-})
+});
 
 app.use('/categories', require('./routes/categories'));
 
